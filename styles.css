@@ -1,0 +1,287 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--primary-bg); /* Light beige */
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+    padding-top: 60px; /* Offset for fixed navbar */
+}
+
+/* Colors */
+:root {
+    --primary-bg: #F9F4ED; /* Light beige */
+    --accent-color: #F6D2D1; /* Soft light pink */
+    --text-color-dark: #333; /* Dark text */
+    --text-color-light: #666; /* Lighter text */
+    --box-bg: #f8e1e0; /* New color for the box background */
+    --button-bg: #CC8B7C; /* Light pink background for buttons */
+    --button-hover: #EABBB9; /* Hover effect for buttons */
+}
+
+/* Fixed Navigation Bar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color-dark);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* Hero Section with Profile Photo */
+.hero {
+    height: 100vh; /* Full screen height */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.hero-content {
+    color: var(--text-color-dark);
+    background: #e18b8421;
+    padding: 40px 250px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 20px;
+}
+
+.hero h1 {
+    font-size: 4em; /* Larger font for "Kirby Alise" */
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    background-color: var(--button-bg);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.05);
+}
+
+/* Profile Photo */
+.profile-photo {
+    width: 100%;  /* Responsive */
+    max-width: 700px;  /* Set a max width */
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+/* About Section */
+.about-section {
+    padding: 60px 40px;
+    background-color: white;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: var(--text-color-dark);
+}
+
+.about-section p {
+    font-size: 1.2em;
+    color: var(--text-color-light);
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 60px 40px;
+    background-color: var(--primary-bg);
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 1.2em;
+    padding-bottom: 30px;
+    color: var(--text-color-dark);
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--text-color-dark);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid var(--text-color-light);
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-form button {
+    background-color: var(--button-bg);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.05);
+}
+
+/* Grid Section (Projects Page) */
+.grid-section {
+    padding: 60px 40px;
+    background-color: var(--primary-bg);
+    text-align: center;
+}
+
+.grid-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: var(--text-color-dark);
+    text-align: center;
+}
+
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.grid-item {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: translateY(-10px);
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.grid-item h3 {
+    margin-top: 20px;
+    color: var(--text-color-dark);
+}
+
+.grid-item p {
+    color: var(--text-color-light);
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center
+}
+
+img.social {
+    height: 100px;
+    width: 100px;
+    max-width:100px;
+    margin-top: 10px
+}
+
+
+
+/* Responsive Grid for Tablets and Mobile */
+@media screen and (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    }
+
+    .hero-content {
+        padding: 40px 100px; /* Adjust hero section padding for tablets */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* 1 column on mobile devices */
+    }
+
+    .hero h1 {
+        font-size: 3em; /* Smaller font size on mobile */
+    }
+
+    .hero-content {
+        padding: 20px 40px; /* Smaller padding for hero section on mobile */
+    }
+
+    .profile-photo {
+        max-width: 300px; /* Smaller profile photo on mobile */
+    }
+}
